@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #2b1055, #1f4068);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+
+.left-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 100px;
+    width: 400px;  /* Adjust to match the increased image size */
+}
+
+.left-section img {
+    width: 800px;  /* Increased width */
+    height: 800px; /* Increased height */
+    object-fit: cover;
+    border-radius: 50%; /* Optional: Makes the image circular */
+}
+
+.right-section {
+    text-align: center;
+    flex: 1;
+}
+
+.right-section h2 {
+    font-size: 70px;
+    margin-bottom: 40px;
+}
+
+.service-item {
+    margin-bottom: 30px;
+}
+
+.service-item h3 {
+    font-size: 24px;
+    margin: 0;
+    line-height: 2.5;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background: linear-gradient(135deg, #6e00ff, #ff00ff);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.contact {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 14px;
+}
