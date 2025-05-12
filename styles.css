@@ -1,0 +1,179 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Full viewport height */
+    overflow: auto; /* Enable scrolling if needed */
+    background: linear-gradient(135deg, #201f1d, #22213f, #002442, #00ecbc);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+    color: white;
+    box-sizing: border-box;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    backdrop-filter: blur(10px);
+    width: 90%;
+    max-width: 500px;
+    margin: 40px auto;
+    box-sizing: border-box;
+    min-height: 600px; /* Ensure enough height for scrolling */
+}
+
+header {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.hospital-graphic {
+    width: 100%;
+    height: auto; /* Ensure it scales correctly */
+    overflow: hidden;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: floatAnimation 4s infinite ease-in-out;
+}
+
+.hospital-graphic img {
+    width: 100%;
+    max-width: 400px; /* Adjust based on your image size */
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    animation: bounce 5s infinite alternate;
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes floatAnimation {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+h1 {
+    margin: 20px 0;
+    font-size: 2em;
+}
+
+.login-options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.login-options button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #007adf;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.login-options button:hover {
+    background-color: #00ecbc;
+    transform: translateY(-3px) scale(1.05);
+}
+
+.hospital-login,
+.user-login {
+    display: none;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="number"] {
+    padding: 10px;
+    margin: 5px 0;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="number"]:focus {
+    transform: scale(1.05);
+    outline: none;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #007adf;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    background-color: #00ecbc;
+    transform: translateY(-3px) scale(1.05);
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    color: black;
+}
+
+.data-display {
+    display: none;
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.data-display ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.data-display ul li {
+    background-color: #000000;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
